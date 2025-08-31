@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sor
+  namespace: sor
+spec:
+  selector:
+    matchLabels:
+      app: sor
+  template:
+    metadata:
+      labels:
+        app: sor
+    spec:
+      imagePullSecrets:
+        - name: dockerconfigjson-github-com
+      containers:
+        - image: app-image
+          name: sor
+          ports:
+            - containerPort: 3000
+          resources:
+            limits:
+              memory: 512Mi
+              cpu: 500m
+            requests:
+              memory: 32Mi
+              cpu: 10m
+          readinessProbe:
+            httpGet:
+              port: 3000
+              path: /health
+          livenessProbe:
+            httpGet:
+              port: 3000
+              path: /health
+
