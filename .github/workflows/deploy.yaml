@@ -36,7 +36,7 @@ jobs:
       - name: apply resources folder
         working-directory: "k8s-resources"
         run: |
-          kustomize edit set image app-image=ghcr.io/${{ github.repository }}:sha-${{ github.sha }}
+          kustomize edit set image app-image=ghcr.io/andreaschristianson/space-of-resolution:sha-${{ github.sha }}
           kubectl kustomize | kubectl apply -f -
           kubectl rollout status -n sor deployments
 
