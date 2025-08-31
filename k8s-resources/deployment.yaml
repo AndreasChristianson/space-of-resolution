@@ -24,7 +24,7 @@ spec:
               memory: 512Mi
               cpu: 500m
             requests:
-              memory: 32Mi
+              memory: 64Mi
               cpu: 10m
           readinessProbe:
             httpGet:
