@@ -1,4 +1,9 @@
-export const Header = () => {
+import "./header.css"
 
-    return <header>Header</header>;
+export const Header = () => {
+    return <header className={"center-container"}>
+        <h1>
+            Space of Resolution
+        </h1>
+    </header>;
 }

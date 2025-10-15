@@ -1,0 +1,10 @@
+.column-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.column{
+    min-width: 300px;
+}
