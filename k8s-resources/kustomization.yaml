@@ -5,6 +5,7 @@ resources:
   - deployment.yaml
   - ingress.yaml
   - service.yaml
+  - httproute.yaml
 images:
   - name: "app-image"
     newName: "ghcr.io/andreaschristianson/space-of-resolution:latest"
