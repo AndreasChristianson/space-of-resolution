@@ -1,6 +1,5 @@
 # spaceofresolution.com on the Envoy Gateway (k8s-resources#91). The listener
 # (https-sor) and its certificate are owned by k8s-resources. Public, no auth.
-# Replaces ingress.yaml once the Gateway takes over 80/443.
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:

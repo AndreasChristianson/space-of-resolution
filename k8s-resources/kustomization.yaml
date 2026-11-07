@@ -3,7 +3,6 @@ kind: Kustomization
 namespace: sor
 resources:
   - deployment.yaml
-  - ingress.yaml
   - service.yaml
   - httproute.yaml
 images:
